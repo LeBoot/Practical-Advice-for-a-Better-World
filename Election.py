@@ -2,7 +2,7 @@
 import string, random, math, pandas as pd
 
 class Election:
-    def __init__(self, num_winners=1, ballots_df=None, num_candidates=10, num_observations=10000):
+    def __init__(self, num_winners=1, ballots_df=None, num_candidates=8, num_observations=10000):
         self.num_winners = num_winners
         self.ballots_df = ballots_df if ballots_df else self.create_submitted_ballots(num_candidates, num_observations)
         self.log(f'{len(self.ballots_df):,} ballots received.')

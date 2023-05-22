@@ -34,7 +34,7 @@ Everything herein is written using Python. The *Election* class (defined in [Ele
 
 I used Pandas dataframes for this repo because they can be used anywhere. With potentially hundreds of millions of real-word ballots, I appreciate that spark might be a better approach.
 
-*Election's* `__init__()` method can take an existing dataframe; but by default, it will create 10,000 randomly-generated ballots for a 10-candidate election. The particulars are described using inline comments.
+*Election's* `__init__()` method can take an existing dataframe; but by default, it will create 10,000 randomly-generated ballots for a 8-candidate election. The particulars are described using inline comments.
 
 The key to making this process work is this line of code from the `analyze_ballots()` method and uses [pandas.DataFrame.bfill](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.bfill.html):
 ```python
