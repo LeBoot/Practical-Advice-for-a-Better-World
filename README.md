@@ -4,7 +4,7 @@ This repository accompanies the "Elections and Psephology" chapter of Ben "LeBoo
 # Overview
 In my book, I argue that *Ranked-Choice Voting* (RCV, or *Single Transferrable Vote* (STV)) is a fantastic voting system that must be adopted as society attempts to create a better world.
 
-### Voting Systems
+## Voting Systems
 The system we currently use is called *Winner Take All* or *First Past the Post* (FPTP); in it, every voter gets one vote, and the candidate with the most votes wins. This system is fraught with problems, not the least of which is that it inevitably results in a two-party system.
 
 STV is a system in which voters *rank* the candidates on their ballots. One, two, or all candidates can be ranked. First, everyone's first choices are tallied; if a winner does not emerge, the candidate with the fewest votes is dropped, and the process repeats itself.
@@ -13,9 +13,9 @@ STV can be used for one-winner or multiple-winner elections. It does not punish 
 
 A more detailed discussion occurs in [*Practical Advice*](https://benleboutillier.com/books/Practical_Advice).
 
-CPG Grey uses [these short videos](https://www.cgpgrey.com/politics-in-the-animal-kingdom/) to explains the process smoothly. 
+CPG Grey uses [these short videos](https://www.cgpgrey.com/politics-in-the-animal-kingdom/) to explain the process smoothly. 
 
-### This Repository
+## This Repository
 In [*Practical Advice for a Better World*](https://benleboutillier.com/books/Practical_Advice), I make the following claim: "With the transparency of the system, you could determine the election results yourself if you had the time and some light programming skills." This repository is intended to 1) prove that point, and 2) provide a visual for those who can't quite envision what I've described.
 
 As a professional data engineer, I don't have a good sense for what would be considered "light" programming skills, but the core of what you find here only took about an hour to write and test.
@@ -24,12 +24,12 @@ As a professional data engineer, I don't have a good sense for what would be con
 
 # About
 
-### For Non-Technical People
+## For Non-Technical People
 What you're looking at is a *GitHub repository*. This is a place for keeping and viewing code. Navigate it like you would a website or file explorer on your laptop. [This file](./stv.ipynb) is light on code, easy-to-read, and has a good overview of how simple the process can be.
 
 If you dig into [this file](./Election.py), the code can look quite intimidating. Nevertheless, I've added comments throughout to help both you and me understand it better.
 
-### For Technical People
+## For Technical People
 Everything herein is written using Python. The *Election* class (defined in [Election.py](Election.py)) contains all the properties and methods needed to run the process start to finish, as demonstrated in [this Jupyter notebook](./stv.ipynb).
 
 I used Pandas dataframes for this repo because they can be used anywhere. With potentially hundreds of millions of real-word ballots, I appreciate that spark might be a better approach.

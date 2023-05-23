@@ -27,14 +27,14 @@ class Election:
         names.append(None)
 
         # Create ballots that rank candidates.
-        # The rank is produced by randomly pulling candidates from the weighted list.
+        # The rank is produced by randomly pulling candidates from the list of names.
         # 'None' cannot be a first choice, nor can any choices be made after 'None'.
         ballot_results_raw = []
         for _ in range(num_observations):
             obs = []
+            obs_spread = names.copy()
+            random.shuffle(obs_spread)
             while len(obs) < num_candidates:
-                obs_spread = names.copy()
-                random.shuffle(obs_spread)
                 if len(obs) == 0:
                     next_choice = None
                     while next_choice == None:
@@ -42,15 +42,12 @@ class Election:
                 elif obs[-1] == None:
                     next_choice = None
                 else:
-                    unacceptable = True
-                    while unacceptable:
-                        next_choice = obs_spread.pop()
-                        unacceptable = next_choice in obs
+                    next_choice = obs_spread.pop()
                 obs.append(next_choice)
             ballot_results_raw.append(obs)
 
         # Name columns as Choice_1, Choice_2, etc.
-        ballot_resutls = pd.DataFrame(data=ballot_results_raw, columns=[f'Choice_{i+1}' for i in range(len(names)-1)])
+        ballot_resutls = pd.DataFrame(data=ballot_results_raw, columns=[f'Choice_{i+1}' for i in range(num_candidates)])
 
         # Reset index to start at 1 instead of 0.
         ballot_resutls.index += 1
@@ -120,7 +117,8 @@ class Election:
         res.reverse()
         res.pop()
         for x in res:
-            print(x[0])
+            total = x[1].sum()
+            print(f'{x[0]} - {total} votes')
             for i in x[1:]:
                 for j in range(len(i)):
-                    print(f'\t{i.index[j]}\t{i[j]}')
+                    print(f'\t{i.index[j]}\t{i[j]}\t{100*i[j]/total:.3}%')
