@@ -20,17 +20,17 @@ In [*Practical Advice for a Better World*](https://benleboutillier.com/books/Pra
 
 As a professional data engineer, I don't have a good sense for what would be considered "light" programming skills, but the core of what you find here only took about an hour to write and test.
 
-**[This file](./stv.ipynb) overviews the process** and displays results. **[This file](./Election.py) is the underlying code** and makes it happen.
+**[This file](./summary_of_process.ipynb) overviews the process** and displays results. **[This file](./Election.py) is the underlying code** and makes it happen.
 
 # About
 
-## For Non-Technical People
-What you're looking at is a *GitHub repository*. This is a place for keeping and viewing code. Navigate it like you would a website or file explorer on your laptop. [This file](./stv.ipynb) is light on code, easy-to-read, and has a good overview of how simple the process can be.
+### For Non-Technical People
+What you're looking at is a *GitHub repository*. This is a place for keeping and viewing code. Navigate it like you would a website or file explorer on your laptop. [This file](./summary_of_process.ipynb) is light on code, easy-to-read, and has a good overview of how simple the process can be.
 
 If you dig into [this file](./Election.py), the code can look quite intimidating. Nevertheless, I've added comments throughout to help both you and me understand it better.
 
-## For Technical People
-Everything herein is written using Python. The *Election* class (defined in [Election.py](Election.py)) contains all the properties and methods needed to run the process start to finish, as demonstrated in [this Jupyter notebook](./stv.ipynb).
+### For Technical People
+Everything herein is written using Python. The *Election* class (defined in [Election.py](Election.py)) contains all the properties and methods needed to run the process start to finish, as demonstrated in [this Jupyter notebook](./summary_of_process.ipynb).
 
 I used Pandas dataframes for this repo because they can be used anywhere. With potentially hundreds of millions of real-word ballots, I appreciate that spark might be a better approach.
 
@@ -40,7 +40,7 @@ The key to making this process work is this line of code from the `analyze_ballo
 ```python
 df = df.bfill(axis=1).dropna(axis=0, how='all')
 ```
-`bfill(axis=1)` (alias for `fillna(method='bfill', axis=1)`) fills a `NaN` values with the nearest nonnull value to it's right.
+`bfill(axis=1)` (alias for `fillna(method='bfill', axis=1)`) fills a `NaN` value with the nearest nonnull value to its right.
 
 Because the dataframe has columns `Choice_1`, `Choice_2`, etc. from left to right, if `Choice_1` is `NaN`, then `Choice_1` is replaced with the value from `Choice_2`.
 
