@@ -1,6 +1,8 @@
 # Welcome
 This repository accompanies the "Elections and Psephology" chapter of Ben "LeBoot" LeBoutillier's groundbreaking book titled [*Practical Advice for a Better World*](https://benleboutillier.com/books/Practical_Advice).
 
+Learn more at [BenLeBoutillier.com](https://BenLeBoutillier.com).
+
 # Overview
 In my book, I argue that *Ranked-Choice Voting* (RCV, or *Single Transferrable Vote* (STV)) is a fantastic voting system that must be adopted as society attempts to create a better world.
 
@@ -11,7 +13,7 @@ STV is a system in which voters *rank* the candidates on their ballots. One, two
 
 STV can be used for one-winner or multiple-winner elections. It does not punish voting for small-party candidates, and consequently it does not force a two-party system.
 
-A more detailed discussion occurs in [*Practical Advice*](https://benleboutillier.com/books/Practical_Advice).
+A more detailed discussion occurs in [*Practical Advice for a Better World*](https://benleboutillier.com/books/Practical_Advice).
 
 CPG Grey uses [these short videos](https://www.cgpgrey.com/politics-in-the-animal-kingdom/) to explain the process smoothly. 
 

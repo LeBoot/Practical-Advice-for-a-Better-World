@@ -78,7 +78,7 @@ class Election:
         while True:
             self.cnt_iterations += 1
 
-            # This is the magic behind SVT/RCV: Non-null values fill
+            # This is the magic behind STV/RCV: Non-null values fill
             #   toward the Choice_1 column.
             df = df.bfill(axis=1).dropna(axis=0, how='all')
 
@@ -107,7 +107,7 @@ class Election:
                     return
             
             # If this iteration did not produce a winner, the lowest-ranking
-            #   candidate(s) is/are removed . . . and the process repeates.
+            #   candidate(s) is/are removed . . . and the process repeats.
             else:
                 for i in vc[vc == vc.min()].index:
                     df.replace(i, None, inplace=True)
