@@ -4,7 +4,7 @@ This repository accompanies the "Elections and Psephology" chapter of Ben "LeBoo
 Learn more at [BenLeBoutillier.com](https://BenLeBoutillier.com).
 
 # Overview
-In my book, I argue that *Ranked-Choice Voting* (RCV, or *Single Transferrable Vote* (STV)) is a fantastic voting system that must be adopted as society attempts to create a better world.
+In my book, I argue that *Ranked-Choice Voting* (RCV, or *Single Transferable Vote* (STV)) is a fantastic voting system that must be adopted as society attempts to create a better world.
 
 ## Voting Systems
 The system we currently use is called *Winner Take All* or *First Past the Post* (FPTP); in it, every voter gets one vote, and the candidate with the most votes wins. This system is fraught with problems, not the least of which is that it inevitably results in a two-party system.
